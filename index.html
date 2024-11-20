@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Pagina</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <nav class="navbar">
+    <img src="Sin título.jpg" alt="Mi logo">    
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="cuestionario.html">Cuestionario</a></li>
+    </ul>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+  </nav>
+
+  <script>
+    // Activar el menú móvil
+    const toggleButton = document.getElementById('menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    toggleButton.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+  <section class="slider">
+    <!-- Banner inicial -->
+    <div class="slide" style="background-color: #1E3A8A; color: #FBBF24;">
+      <div class="banner-content">
+        <h1>Viajes Únicos</h1>
+        <p>Descubre experiencias inolvidables con nosotros.</p>
+      </div>
+    </div>
+    <!-- Imágenes del slider -->
+    <div class="slide">
+      <img src="pixel5.jpg" alt="Destino 1">
+    </div>
+    <div class="slide">
+      <img src="pixel2.jpg" alt="Destino 2">
+    </div>
+    <div class="slide">
+      <img src="pixel3.jpg" alt="Destino 3">
+    </div>
+    <!-- Flechas -->
+    <button class="arrow left" id="prev">&#10094;</button>
+    <button class="arrow right" id="next">&#10095;</button>
+  </section>
+  <script src="script.js"></script>
+
+
+  <!-- Contenido sobre la empresa -->
+  <section class="about">
+    <div class="about-text">
+      <h2>Bienvenidos a Viajes Únicos</h2>
+      <p>
+        En Viajes Únicos, nuestra misión es llevarte a los destinos más increíbles del mundo, 
+        creando experiencias personalizadas que recordarás toda tu vida. Ya sea que estés 
+        buscando aventura, relajación o cultura, tenemos algo especial para ti.
+      </p>
+      <p>
+        Trabajamos con los mejores socios para garantizar que cada detalle de tu viaje sea perfecto. 
+        ¡Descubre por qué somos tu mejor opción para explorar el mundo!
+      </p>
+    </div>
+    <div class="about-images">
+      <div class="image-card">
+        <img src="pequeño1.jpeg" alt="Experiencias únicas">
+        <h3>Experiencias únicas</h3>
+        <p>Disfruta de actividades inolvidables diseñadas para ti.</p>
+      </div>
+      <div class="image-card">
+        <img src="pequeño2.jpeg" alt="Aventura">
+        <h3>Aventura y naturaleza</h3>
+        <p>Explora paisajes naturales impresionantes y emocionantes.</p>
+      </div>
+      <div class="image-card">
+        <img src="pequeño3.jpeg" alt="Cultura">
+        <h3>Cultura y tradición</h3>
+        <p>Conéctate con las culturas locales en cada destino.</p>
+      </div>
+    </div>
+  </section>
+<!-- Sección de testimonios -->
+<section class="testimonials">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-card">
+        <p>
+          "Viajar con Viajes Únicos fue la mejor decisión. Todo estuvo perfectamente organizado, y cada detalle nos dejó
+          maravillados."
+        </p>
+        <h3>- María Fernández</h3>
+      </div>
+      <div class="testimonial-card">
+        <p>
+          "Nunca había experimentado un viaje tan personalizado. Desde el transporte hasta las actividades, todo fue
+          increíble."
+        </p>
+        <h3>- Carlos Ramírez</h3>
+      </div>
+      <div class="testimonial-card">
+        <p>
+          "¡Simplemente perfecto! Recomiendo Viajes Únicos a cualquiera que quiera vivir experiencias inolvidables."
+        </p>
+        <h3>- Laura Gómez</h3>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sección de galería dinámica -->
+  <section class="gallery">
+    <h2>Explora nuestros destinos</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="i1.jpeg" alt="Destino 1">
+        <div class="overlay">
+          <p>LINDO LUGAR DE RELAJACION</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="i2.jpeg" alt="Destino 2">
+        <div class="overlay">
+          <p>PASALA BIEN CON TU FAMILIA</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="i3.jpeg" alt="Destino 3">
+        <div class="overlay">
+          <p>VIVE AVENTURAS</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="i4.jpeg" alt="Destino 4">
+        <div class="overlay">
+          <p>NO TE DETENGAS EN LAS AVENTURAS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Viajes Únicos</h3>
+        <p>
+          Explora el mundo con nosotros. Creamos experiencias personalizadas y únicas para que tus viajes sean inolvidables.
+        </p>
+      </div>
+      <div class="footer-contact">
+        <h3>Contáctanos</h3>
+        <ul>
+          <li>Email: pepito@gmail.com</li>
+          <li>Teléfono: +123 5345 3231</li>
+          <li>Dirección: Calle 4, la ceja</li>
+          <li>lugar: La Paz Bolivia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Viajes Únicos. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+<!-- Menú de Redes Sociales -->
+<div class="social-media">
+    <a href="https://www.facebook.com" target="_blank" class="social-icon facebook" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.twitter.com" target="_blank" class="social-icon twitter" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" class="social-icon instagram" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+  <!-- Font Awesome para los iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</body>
+</html>
