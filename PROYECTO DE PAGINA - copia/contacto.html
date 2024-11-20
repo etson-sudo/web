@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Pagina</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <nav class="navbar">
+    <img src="Sin título.jpg" alt="Mi logo">    
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="cuestionario.html">Cuestionario</a></li>
+    </ul>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+  </nav>
+
+  <script>
+    // Activar el menú móvil
+    const toggleButton = document.getElementById('menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    toggleButton.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+  <!-- Página de Contacto -->
+<section class="contact">
+    <div class="container">
+      <h2>Contacta con Nosotros</h2>
+      <form action="#" method="POST" class="contact-form">
+        <label for="name">¿Cómo te llamas?</label>
+        <input type="text" id="name" name="name" required placeholder="Tu nombre completo">
+  
+        <label for="email">¿Cuál es tu correo electrónico?</label>
+        <input type="email" id="email" name="email" required placeholder="Tu correo electrónico">
+  
+        <label for="destination">¿A qué destino te gustaría viajar?</label>
+        <input type="text" id="destination" name="destination" placeholder="Destino preferido">
+  
+        <label for="budget">¿A donde quieres ir?</label>
+        <input type="number" id="budget" name="budget" placeholder="dinos un lugar " required>
+  
+        <label for="message">¿Tienes alguna pregunta o comentario?</label>
+        <textarea id="message" name="message" rows="4" placeholder="Escribe aquí tu mensaje"></textarea>
+  
+        <button type="submit" class="submit-btn">Enviar Consulta</button>
+      </form>
+  
+      <div class="map">
+        <h3>Ubicación de Nuestra Oficina</h3>
+        <div class="map-container">
+          <img src="mapa.png" alt="Mapa de la Oficina de Viajes Únicos">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Viajes Únicos</h3>
+        <p>
+          Explora el mundo con nosotros. Creamos experiencias personalizadas y únicas para que tus viajes sean inolvidables.
+        </p>
+      </div>
+      <div class="footer-contact">
+        <h3>Contáctanos</h3>
+        <ul>
+          <li>Email: pepito@gmail.com</li>
+          <li>Teléfono: +123 5345 3231</li>
+          <li>Dirección: Calle 4, la ceja</li>
+          <li>lugar: La Paz Bolivia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Viajes Únicos. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+<!-- Menú de Redes Sociales -->
+<div class="social-media">
+    <a href="https://www.facebook.com" target="_blank" class="social-icon facebook" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.twitter.com" target="_blank" class="social-icon twitter" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" class="social-icon instagram" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+  <!-- Font Awesome para los iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</body>
+</html>

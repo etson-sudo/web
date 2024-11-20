@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Pagina</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <nav class="navbar">
+    <img src="Sin título.jpg" alt="Mi logo">    
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="cuestionario.html">Cuestionario</a></li>
+    </ul>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+  </nav>
+
+  <script>
+    // Activar el menú móvil
+    const toggleButton = document.getElementById('menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    toggleButton.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+  <section class="slider">
+    <!-- Banner inicial -->
+    <div class="slide" style="background-color: #1E3A8A; color: #FBBF24;">
+      <div class="banner-content">
+        <h1>Viajes Únicos</h1>
+        <p>Descubre experiencias inolvidables con nosotros.</p>
+      </div>
+    </div>
+    <!-- Imágenes del slider -->
+    <div class="slide">
+      <img src="pixel5.jpg" alt="Destino 1">
+    </div>
+    <div class="slide">
+      <img src="pixel2.jpg" alt="Destino 2">
+    </div>
+    <div class="slide">
+      <img src="pixel3.jpg" alt="Destino 3">
+    </div>
+    <!-- Flechas -->
+    <button class="arrow left" id="prev">&#10094;</button>
+    <button class="arrow right" id="next">&#10095;</button>
+  </section>
+  <script src="script.js"></script>
+<!-- Sección sobre la empresa con imágenes y diseño mejorado -->
+<section class="about-company">
+    <div class="container">
+      <h2>¿Quiénes somos?</h2>
+      <div class="content">
+        <div class="text">
+          <p>
+            En <strong>Viajes Únicos</strong>, somos una agencia de viajes con más de 10 años de experiencia en la creación de experiencias personalizadas e inolvidables. Nuestro objetivo es hacer realidad los sueños de nuestros clientes, ofreciéndoles destinos exclusivos, itinerarios personalizados y un servicio de atención excepcional en cada paso del camino.
+          </p>
+          <p>
+            Nos especializamos en viajes a medida, adaptándonos a tus gustos, preferencias y presupuesto. Ya sea que busques relajarte en una isla paradisíaca, explorar destinos exóticos o descubrir ciudades llenas de historia y cultura, en <strong>Viajes Únicos</strong> tenemos la experiencia y el conocimiento para ofrecerte la mejor opción.
+          </p>
+          <h3>Nuestros valores</h3>
+          <ul>
+            <li><strong>Compromiso:</strong> Nos aseguramos de que cada viaje sea perfecto, desde el primer contacto hasta el regreso.</li>
+            <li><strong>Personalización:</strong> Cada cliente es único, y trabajamos para crear el itinerario que mejor se ajuste a sus deseos.</li>
+            <li><strong>Experiencia:</strong> Con más de 10 años en la industria, sabemos cómo hacer que cada viaje sea especial.</li>
+            <li><strong>Confianza:</strong> Nuestra prioridad es la satisfacción de nuestros clientes, y trabajamos con proveedores de confianza para garantizar la mejor experiencia.</li>
+          </ul>
+          <p>
+            Viajar con nosotros es una experiencia única, en la que podrás disfrutar de cada momento con total tranquilidad, sabiendo que tu viaje está siendo planeado por expertos.
+          </p>
+        </div>
+        <div class="images">
+          <img src="hola1.jpeg" alt="Viaje a Destino Exótico">
+          <img src="hola2.jpeg" alt="Playa Paradisíaca">
+          <img src="hola3.jpeg" alt="Ciudad Cultural">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Viajes Únicos</h3>
+        <p>
+          Explora el mundo con nosotros. Creamos experiencias personalizadas y únicas para que tus viajes sean inolvidables.
+        </p>
+      </div>
+      <div class="footer-contact">
+        <h3>Contáctanos</h3>
+        <ul>
+          <li>Email: pepito@gmail.com</li>
+          <li>Teléfono: +123 5345 3231</li>
+          <li>Dirección: Calle 4, la ceja</li>
+          <li>lugar: La Paz Bolivia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Viajes Únicos. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+<!-- Menú de Redes Sociales -->
+<div class="social-media">
+    <a href="https://www.facebook.com" target="_blank" class="social-icon facebook" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.twitter.com" target="_blank" class="social-icon twitter" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" class="social-icon instagram" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+  <!-- Font Awesome para los iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</body>
+</html>

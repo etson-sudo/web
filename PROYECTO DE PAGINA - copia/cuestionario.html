@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Pagina</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <nav class="navbar">
+    <img src="Sin título.jpg" alt="Mi logo">    
+    <ul class="menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="cuestionario.html">Cuestionario</a></li>
+    </ul>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+  </nav>
+
+  <script>
+    // Activar el menú móvil
+    const toggleButton = document.getElementById('menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    toggleButton.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
+ <!-- Página de Cuestionario -->
+<section class="survey">
+    <div class="container">
+      <h2>¡Queremos Conocer Tu Opinión!</h2>
+      <form id="surveyForm">
+        <!-- Pregunta 1 -->
+        <div class="question">
+          <label for="q1">1. ¿Cómo calificarías la calidad de nuestro servicio?</label>
+          <div class="options">
+            <input type="radio" name="q1" value="Excelente" required> Excelente
+            <input type="radio" name="q1" value="Bueno"> Bueno
+            <input type="radio" name="q1" value="Regular"> Regular
+            <input type="radio" name="q1" value="Malo"> Malo
+          </div>
+        </div>
+  
+        <!-- Pregunta 2 -->
+        <div class="question">
+          <label for="q2">2. ¿Cómo calificarías la rapidez de nuestro servicio?</label>
+          <div class="options">
+            <input type="radio" name="q2" value="Excelente" required> Excelente
+            <input type="radio" name="q2" value="Bueno"> Bueno
+            <input type="radio" name="q2" value="Regular"> Regular
+            <input type="radio" name="q2" value="Malo"> Malo
+          </div>
+        </div>
+  
+        <!-- Pregunta 3 -->
+        <div class="question">
+          <label for="q3">3. ¿El personal fue amable y atento?</label>
+          <div class="options">
+            <input type="radio" name="q3" value="Sí" required> Sí
+            <input type="radio" name="q3" value="No"> No
+          </div>
+        </div>
+  
+        <!-- Pregunta 4 -->
+        <div class="question">
+          <label for="q4">4. ¿Recomendarías nuestros servicios a otras personas?</label>
+          <div class="options">
+            <input type="radio" name="q4" value="Sí" required> Sí
+            <input type="radio" name="q4" value="No"> No
+          </div>
+        </div>
+  
+        <!-- Pregunta 5 -->
+        <div class="question">
+          <label for="q5">5. ¿Cómo calificarías la relación calidad-precio de nuestros viajes?</label>
+          <div class="options">
+            <input type="radio" name="q5" value="Excelente" required> Excelente
+            <input type="radio" name="q5" value="Bueno"> Bueno
+            <input type="radio" name="q5" value="Regular"> Regular
+            <input type="radio" name="q5" value="Malo"> Malo
+          </div>
+        </div>
+  
+        <!-- Pregunta 6 -->
+        <div class="question">
+          <label for="q6">6. ¿La información proporcionada en el sitio web fue útil y clara?</label>
+          <div class="options">
+            <input type="radio" name="q6" value="Sí" required> Sí
+            <input type="radio" name="q6" value="No"> No
+          </div>
+        </div>
+  
+        <!-- Pregunta 7 -->
+        <div class="question">
+          <label for="q7">7. ¿Cuánto tiempo tardaste en recibir respuesta a tus dudas?</label>
+          <div class="options">
+            <input type="radio" name="q7" value="Rápido" required> Rápido
+            <input type="radio" name="q7" value="Lento"> Lento
+          </div>
+        </div>
+  
+        <!-- Pregunta 8 -->
+        <div class="question">
+          <label for="q8">8. ¿El proceso de reserva fue fácil y rápido?</label>
+          <div class="options">
+            <input type="radio" name="q8" value="Sí" required> Sí
+            <input type="radio" name="q8" value="No"> No
+          </div>
+        </div>
+  
+        <!-- Pregunta 9 -->
+        <div class="question">
+          <label for="q9">9. ¿El viaje cumplió con tus expectativas?</label>
+          <div class="options">
+            <input type="radio" name="q9" value="Sí" required> Sí
+            <input type="radio" name="q9" value="No"> No
+          </div>
+        </div>
+  
+        <!-- Pregunta 10 -->
+        <div class="question">
+          <label for="q10">10. ¿Te gustaría que ofrezcamos más destinos?</label>
+          <div class="options">
+            <input type="radio" name="q10" value="Sí" required> Sí
+            <input type="radio" name="q10" value="No"> No
+          </div>
+        </div>
+  
+        <button type="submit" class="submit-btn">Enviar Opinión</button>
+      </form>
+  
+      <!-- Mensaje de Agradecimiento -->
+      <div id="resultMessage"></div>
+    </div>
+  </section>
+  <script>
+    document.getElementById("surveyForm").addEventListener("submit", function(event) {
+      // Evita que el formulario se envíe de forma predeterminada
+      event.preventDefault();
+  
+      // Validación de las respuestas (opcional)
+      let isValid = true;
+      const questions = document.querySelectorAll(".question");
+      questions.forEach(function(question) {
+        const selected = question.querySelector("input:checked");
+        if (!selected) {
+          isValid = false;
+        }
+      });
+  
+      // Si no se ha respondido alguna pregunta
+      if (!isValid) {
+        alert("Por favor, responde todas las preguntas antes de enviar.");
+        return;
+      }
+  
+      // Ocultar el formulario
+      document.getElementById("surveyForm").style.display = "none";
+  
+      // Mostrar el mensaje de agradecimiento
+      const resultMessage = document.getElementById("resultMessage");
+      resultMessage.innerHTML = `
+          <h3>¡Gracias por tus respuestas!</h3>
+          <p>Estaremos mejorando nuestros servicios para brindarte la mejor experiencia posible. Tu opinión es muy importante para nosotros.</p>
+      `;
+      resultMessage.style.display = "block";
+    });
+  </script>
+  <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Viajes Únicos</h3>
+        <p>
+          Explora el mundo con nosotros. Creamos experiencias personalizadas y únicas para que tus viajes sean inolvidables.
+        </p>
+      </div>
+      <div class="footer-contact">
+        <h3>Contáctanos</h3>
+        <ul>
+          <li>Email: pepito@gmail.com</li>
+          <li>Teléfono: +123 5345 3231</li>
+          <li>Dirección: Calle 4, la ceja</li>
+          <li>lugar: La Paz Bolivia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Viajes Únicos. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+<!-- Menú de Redes Sociales -->
+<div class="social-media">
+    <a href="https://www.facebook.com" target="_blank" class="social-icon facebook" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.twitter.com" target="_blank" class="social-icon twitter" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" class="social-icon instagram" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.linkedin.com" target="_blank" class="social-icon linkedin" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+  <!-- Font Awesome para los iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</body>
+</html>
